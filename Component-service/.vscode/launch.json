@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ComponentServiceApplication<components-handler>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "co.edu.unicauca.componentservice.ComponentServiceApplication",
+            "projectName": "components-handler",
+            "args": ""
+        }
+    ]
+}
