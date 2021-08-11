@@ -1,2 +1,2 @@
 # RlxdFood
-Delivery application made by a microservices architecture
+Delivery application made with a microservices architecture
