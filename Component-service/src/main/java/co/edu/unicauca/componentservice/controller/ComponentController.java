@@ -29,7 +29,8 @@ public class ComponentController {
 	
 	@PostMapping
 	public ResponseEntity<?> create(@RequestBody Component newCmpnt) throws Exception{
-		if(cmpntService.findByName(newCmpnt.getName())){
+		List<Component> tmpComponents = cmpntService.findByName(newCmpnt.getName());
+		if(tmpComponents.isEmpty()){
 			return ResponseEntity.status(HttpStatus.CREATED).body(cmpntService.create(newCmpnt));
 		}
 		return ResponseEntity.status(HttpStatus.ALREADY_REPORTED).body("The component is existing into the DB already");

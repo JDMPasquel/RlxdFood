@@ -43,13 +43,13 @@ public class ComponentServiceImpl implements IComponentService{
 	}
 
 	@Override
-	public Boolean findByName(String name) throws Exception {
-		Long foundRegisters;
-		foundRegisters = cmpntDao.findByName(name);
-		if(foundRegisters > 0){
-			return true;
+	public List<Component> findByName(String name) throws Exception {
+		try {
+			List<Component> NamedExistingComponents = cmpntDao.findByName(name);
+			return NamedExistingComponents;
+		} catch (Exception e) {
+			throw new Exception(e.getMessage());
 		}
-		return false;
 	}
 	
 	@Override

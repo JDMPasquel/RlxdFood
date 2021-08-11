@@ -31,7 +31,7 @@ public interface IComponentService {
 	/**
 	 * Doc into the IComponentDao interface
 	 */
-	public Boolean findByName(String name) throws Exception;
+	public List<Component> findByName(String name) throws Exception;
 
 	/**
 	 * As an option to do some filters by a specific column. A String is used to the filter
