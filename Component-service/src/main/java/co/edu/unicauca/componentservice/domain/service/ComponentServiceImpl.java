@@ -43,15 +43,35 @@ public class ComponentServiceImpl implements IComponentService{
 	}
 
 	@Override
-	public List<Component> findByName(String name) throws Exception {
+	public Boolean findByName(String name) throws Exception {
+		Long foundRegisters;
+		foundRegisters = cmpntDao.findByName(name);
+		if(foundRegisters > 0){
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public List<Component> groupByColumn(String columnName) throws Exception {
 		try {
-			List<Component> NamedExistingComponents = cmpntDao.findByName(name);
-			return NamedExistingComponents;
+			List<Component> componentsFiltered = cmpntDao.groupByColumn(columnName);
+			return componentsFiltered;
 		} catch (Exception e) {
 			throw new Exception(e.getMessage());
 		}
 	}
-	
+
+	@Override
+	public List<Component> orderByColumn(String columnName) throws Exception {
+		try {
+			List<Component> componentsOrdered = cmpntDao.orderBySelectedColumn(columnName);
+			return componentsOrdered;
+		} catch (Exception e) {
+			throw new Exception(e.getMessage());
+		}
+	}
+
 	@Override
 	@Transactional
 	public Component create(Component newCmpnt) {

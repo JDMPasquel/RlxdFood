@@ -36,10 +36,10 @@ public interface IComponentDao extends JpaRepository<Component, Long>{
 	 * @return a List with the name of the searched component (if exists)
 	 */
     @Query(
-        value = "SELECT * FROM components WHERE name LIKE %?%",
+        value = "SELECT COUNT(*) FROM components WHERE name LIKE %?%",
         nativeQuery = true
     )
-    public List<Component> findByName(String name);
+    public Long findByName(String name);
 
 	/**
 	 * According with the first requeriments version, the service must

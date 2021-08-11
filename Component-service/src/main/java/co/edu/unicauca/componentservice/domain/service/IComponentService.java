@@ -31,8 +31,16 @@ public interface IComponentService {
 	/**
 	 * Doc into the IComponentDao interface
 	 */
-	public List<Component> findByName(String name) throws Exception;
-	
+	public Boolean findByName(String name) throws Exception;
+
+	/**
+	 * As an option to do some filters by a specific column. A String is used to the filter
+	 * of any column will allowed
+	 */
+	public List<Component> groupByColumn(String columnName) throws Exception;
+
+	public List<Component> orderByColumn(String columnName) throws Exception;
+
 	/**
 	 * In the Service used by the controller, this methods will use the validation if the
 	 * elements is not found (deleteById method, for example)
