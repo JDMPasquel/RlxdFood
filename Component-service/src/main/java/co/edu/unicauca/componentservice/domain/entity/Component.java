@@ -84,7 +84,7 @@ public class Component implements Serializable{
 			return false;
 		return true;
 	}
-	
+
 	/**
 	 * @return the id
 	 */
