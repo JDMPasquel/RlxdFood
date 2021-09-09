@@ -14,4 +14,26 @@ spring.datasource.password --> Su correspondiente contraseña del esquema creado
 
 PROBAR LOS SERVICIOS EN POSTMAN DE LA SIGUIENTE MANERA:
 
+Component-service
+Postman >> url = localhost:7777/api/components
+POST:
+body>>raw>>text - JSON
+{
+    "name":"Nombre que desee",
+    "type":"Tipo que puede ser START, MAIN_COURSE, PROTEIN, DRINK"
+}
 
+GET:
+ componente específico: url = localhost:7777/api/components/id
+ Todos los componentes: url = localhost:7777/api/components/
+
+
+user-service
+Postman >> url = localhost:7890/api/users
+POST:
+body>>raw>>text - JSON
+{
+    "name":"Nombre que desee",
+    "biologicGender": "Valor que puede ser FEMENINO O MASCULINO",
+    "birthDate": "Fecha de nacimiento en formato"
+}
