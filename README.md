@@ -29,11 +29,28 @@ GET:
 
 
 user-service
-Postman >> url = localhost:7890/api/users
+Postman >> url = localhost:7890/api/clients
 POST:
 body>>raw>>text - JSON
 {
     "name":"Nombre que desee",
-    "biologicGender": "Valor que puede ser FEMENINO O MASCULINO",
-    "birthDate": "Fecha de nacimiento en formato"
+    "biologicGender": "Valor que puede ser FEMALE O MALE",
+    "birthDate": "Fecha de nacimiento en formato yyyy-MM-dd por ejemplo 1990-09-09",
+    "phoneNumber": "número cualquiera"
+    "email": "El que se desee"
+    "password": "La que se desee"
 }
+
+NO SE PUEDE HACER GET
+
+restaurant-handler-service
+Postman >> url = localhost:8790/api/restaurants
+POST:
+body>>raw>>text - JSON
+{
+    
+}
+
+GET:
+    Restaurante específico: localhost:8790/api/restaurants/nit
+    Todos restaurantes: localhost:8790/api/restaurants/
