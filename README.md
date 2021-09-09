@@ -12,3 +12,6 @@ spring.datasource.url --> únicamente se debe hacer el cambio donde dice restaur
 spring.datasource.username --> su correspondiente usuario del esquema creado
 spring.datasource.password --> Su correspondiente contraseña del esquema creado
 
+PROBAR LOS SERVICIOS EN POSTMAN DE LA SIGUIENTE MANERA:
+
+
