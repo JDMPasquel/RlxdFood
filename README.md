@@ -48,7 +48,22 @@ Postman >> url = localhost:8790/api/restaurants
 POST:
 body>>raw>>text - JSON
 {
-    
+    "nit": "Nit que se desee",
+    "name": "Nombre del restaurante",
+    "slogan": "Slogan del restaurante",
+    "restOwner": "Propietario",
+    "restAdmin": "admin",
+    "city": "Ciudad - debe ser en mayúsculas - hasta el momento sólo se tiene POPAYAN",
+    "address": "Dirección",
+    "numbers": [ //Poner los números que se tengan si se tienen 3 se añade otro con el mismo formato que los que se muestran
+        {
+            "number": "8352215"
+        },
+        {
+            "number": "8356975"
+        }
+    ],
+    "imgUrl": "Url de la imagen --> ejemplo: http//:www.img.com"
 }
 
 GET:
